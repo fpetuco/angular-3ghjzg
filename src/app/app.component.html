@@ -40,6 +40,7 @@
         [(ngModel)]="appliedFilter.programCode"
         (change)="setValue('programCode', $event)"
         (p-change)="d()"
+        [p-disabled]="disabled"
         p-label="Hero 2"
         p-field-label="label"
         p-field-value="value"
