@@ -39,6 +39,7 @@ export class AppComponent {
   statusOptions: Array<PoCheckboxGroupOption>;
   appliedFilter: OrderFilter;
   fields: OrderFilter;
+  disabled: boolean = false;
 
   hero: string = '';
   filters: OrderFilter = new OrderFilter();
@@ -334,6 +335,11 @@ export class AppComponent {
 
   public log(e, m) {
     console.log(`Evento: ${e} componente: ${m}`);
+  }
+
+  public d() {
+    console.log('p-change');
+    this.disabled = false;
   }
 
   public openHeroModal(): void {
